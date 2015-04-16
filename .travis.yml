@@ -17,7 +17,7 @@ before_script:
 - git config --global user.email "travis@bq.com"
 - git config --global user.name "TRAVIS-CI"
 script:
-- jekyll build
+- bundle exec jekyll build
 - ./travis-runner.sh
 branches:
   only:
