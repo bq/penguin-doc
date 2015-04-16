@@ -20,4 +20,17 @@ branches:
   - master
 env:
   global:
-    secure: Jv4rbaTWg2mi23NZsiLfp34F23o0EVUGTdLv2qVcKt5AbZzi1IpeXhs6olTCrpyO+DxLTfKFbwGwL20myr7Tf94uHE/PM3+HYocSxTjiiOK8Mvj7FF75TCXRVUnx135jd36BthihEaAZZmOU4/xYtARXRU0i/JyPZXUiNM0Yvhc=
+	# GH_OAUTH_TOKEN is the oauth token generated as described at
+	# https://help.github.com/articles/creating-an-oauth-token-for-command-line-use
+	#
+	# curl -u 'username' -d '{"scopes":["repo"],"note":"push to gh-pages from travis"}' https://api.github.com/authorizations
+	#
+	# It must be encrypted using the travis gem
+	# http://about.travis-ci.org/docs/user/build-configuration/#Secure-environment-variables
+	#
+	# travis encrypt GH_OAUTH_TOKEN=XXXXXXXXXXXXXXX
+	#
+	# User specific env variables  
+    - secure: 'D/s+DNENn9UK0IIthxT0eIk9PSpk2Rcufz5eXl/MES7LY6z6gR32GeT1NsYJA8y09Kp29PM4gA0aJ2mIbQupjRT993WhwMycVBxnBNv8mpblCDV9FPN849mwWVrybwJ50pWSN0fZcS9bvx57OUf7yE85GGEgPBOFgg88K/pMno4='
+    - GH_OWNER: bq
+    - GH_PROJECT_NAME: penguin-doc
