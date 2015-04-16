@@ -1,6 +1,6 @@
-language: node_js
-node_js:
-- '0.10'
+language: ruby
+rvm:
+- 2.2.0
 notifications:
   email:
     recipients: front-end@bq.com
@@ -18,7 +18,7 @@ before_script:
 - git config --global user.name "TRAVIS-CI"
 script:
 - bundle exec jekyll build
-- ./travis-runner.sh
+- bash ./travis-runner.sh
 branches:
   only:
   - master
