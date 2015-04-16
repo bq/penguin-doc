@@ -8,8 +8,6 @@ notifications:
     on_failure: never
 before_install:
 - npm install -g bower
-- gem install jekyll
-- gem install bundler
 install:
 - bower install
 - bundle install
