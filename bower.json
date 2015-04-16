@@ -1,0 +1,26 @@
+{
+    "name": "penguin-doc",
+    "version": "^0.0.1",
+    "description": "Penguin documentation is a source files for the Penguin site http://penguin.docs.bqws.io",
+    "ignore": [
+        ".tmp",
+        "node_modules",
+        "bower_components",
+        "*.log",
+        ".idea"
+    ],
+    "dependencies": {
+        "penguin-themes": "^0.0.1"
+    },
+    "keywords": [
+        "penguin",
+        "themes",
+        "jquery",
+        "javascript",
+        "css",
+        "html5",
+        "sass",
+        "library",
+        "framework"
+    ]
+}

@@ -1,0 +1,112 @@
+---
+layout: component
+title:  "Table"
+---
+
+A classic. A table displays a collections of tabular data grouped into rows and cols.
+
+##tab inline
+<div class="penguin-example">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Table heading</th>
+                <th>Table heading</th>
+                <th>Table heading</th>
+                <th>Table heading</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="5">table footer</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td><a href="">1</a></td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+            <tr>
+                <td><a href="">2</a></td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+            <tr><td><a href="">3</a></td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+            <tr><td><a href="">4</a></td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+            <tr><td><a href="">5</a></td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% highlight html %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="5">table footer</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td><a href="">1</a></td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+        </tr>
+        <tr>
+            <td><a href="">2</a></td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+        </tr>
+        <tr><td><a href="">3</a></td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+        </tr>
+        <tr><td><a href="">4</a></td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+        </tr>
+        <tr><td><a href="">5</a></td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+        </tr>
+    </tbody>
+</table>
+{% endhighlight %}
