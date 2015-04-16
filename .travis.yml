@@ -8,12 +8,10 @@ notifications:
     on_failure: never
 before_install:
 - npm install -g bower
+- gem install bundler
 install:
 - bower install
 - bundle install
-before_script:
-- git config --global user.email "travis@bq.com"
-- git config --global user.name "TRAVIS-CI"
 script:
 - bundle exec jekyll build
 - bash ./travis-runner.sh
