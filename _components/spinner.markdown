@@ -31,7 +31,7 @@ Loading spinner.
 ##fullscreen spinner
 
 <div class="penguin-example penguin-example--margin">
-	<button class="btn btn--primary btn--spinner-body">Launch in body</button>
+    <button class="btn btn--primary btn--spinner-body">Launch in body</button>
 </div>
 
 ##how to use
@@ -53,16 +53,16 @@ Target is the selector where spinner will be shown.
 $('target').spinner();
 
 // Custom spinner
-$('target').spinner{
+$('target').spinner({
     spinnerClass: 'spinner__element--circle',
     text: 'Loading...',
     show: false
-};
+});
 
 // Custom template
-$('target').spinner{
+$('target').spinner({
     template: '<div>Custom Spinner</div>'
-};
+});
 {% endhighlight %}
 
 ##events
