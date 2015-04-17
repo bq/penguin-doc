@@ -85,8 +85,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 .site-aside a,
-.site-footer a,
-.post-content a {
+.site-footer a{
     color: $brand-color;
     text-decoration: none;
 
@@ -99,7 +98,12 @@ h1, h2, h3, h4, h5, h6 {
         text-decoration: underline;
     }
 }
-
+.post-content{
+  a{
+    font-weight: bold;
+    color: lighten($brand-color, 30%);
+  }
+}
 
 
 /**
