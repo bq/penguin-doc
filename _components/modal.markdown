@@ -145,18 +145,22 @@ myModal.hide();
 
 ###Theme definition
 
-{% highlight html %}
+{% highlight scss %}
 .modal {   
-  &.modal--backdrop {}
-
-  .modal__dialog {
-    .modal__dialog__content {}
-  }
-  .modal__header {
-    .modal__header__title {} 
-    .icon {} 
-  }  
-  .modal__body {}
-  .modal__footer {} 
+  &.modal--backdrop {} 
 }
+
+  .modal__dialog {}
+  
+    .modal__dialog__content {}
+   
+    
+  .modal__header {}
+    
+      .modal__header__title {}
+      
+  .modal__body {}
+  
+  .modal__footer {}
+  
 {% endhighlight %}
