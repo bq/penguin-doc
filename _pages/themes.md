@@ -5,9 +5,11 @@ order: 2
 permalink: /themes/
 ---
 
-##Creating new theme
+## How to create a new theme
 
-First, we need download [penguin-themes](https://github.com/bq/penguin-themes) repository, and create a theme with this structure:
+### 1. Download the themes repository
+
+Download the penguin themes repository [penguin-themes](https://github.com/bq/penguin-themes) and then create the following directory structure:
 
 {% highlight html %}
 penguin-themes/themes/<theme_name>/
@@ -19,27 +21,22 @@ penguin-themes/themes/<theme_name>/
                                     └── main.scss
 {% endhighlight %}
 
-The penguin components are defined in main.scss, and we can set our own variables (_variables.scss) into base and components directories.
+### 2. Set up your theme
 
-To compile theme style's, we need execute this grunt task:
+*Configure your theme variables in `src/css/base/_variables.scss` and `src/css/components/_variables.scss`.
+*Style your theme components in `src/css/components/{component_name}`.
+
+### 3. Build your theme
+
+Compile your theme using the following grunt task:
 
 {% highlight html %}
 grunt build-theme:<theme_name>
 {% endhighlight %}
 
+### 4. Share your theme!
 
-##How to preview the theme
+Now you have your awesome theme ready to be used for hundreds of developers :) Just maque a pull request to the themes repository [penguin-themes](https://github.com/bq/penguin-themes) and we will check it as soon as possible.
 
-After compilation, move all files of new theme to this path into [penguin-doc](https://github.com/bq/penguin-doc) repository:
 
-{% highlight html %}
-penguin-doc/_site/bower_components/penguin-themes/themes/
-{% endhighlight %}
 
-To reload site, we need run this task:
-
-{% highlight html %}
-penguin-doc$ jekyll serve -w
-{% endhighlight %}
-
-Automatically our theme will appear in select list of [components page](/components), and we can get a preview of each component.
