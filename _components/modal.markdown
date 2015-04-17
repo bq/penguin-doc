@@ -145,7 +145,7 @@ myModal.hide();
 
 ###Theme definition
 
-{% highlight html %}
+{% highlight scss %}
 .modal {   
   &.modal--backdrop {}
 
