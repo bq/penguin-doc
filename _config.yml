@@ -23,7 +23,7 @@ collections:
 markdown: kramdown
 
 
-# Sass config
+# Sass configuration
 sass:
   sass_dir: assets/css
   style: compressed
