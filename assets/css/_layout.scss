@@ -416,6 +416,10 @@
 
 }
 
+
+
+
+
 /*------------------------------------*\
     # Penguin Examples
 \*------------------------------------*/
@@ -496,6 +500,27 @@
 .box--block {
   width: 100%;
 }
+
+
+.sprite-svg {
+  font-size: 32px;
+  margin-right: 1.5em;
+  float: left;
+  overflow: hidden;
+
+  .icon {
+    width: 1em;
+    height: 1em;
+  }
+
+  svg {
+    color: #444444;
+  }
+
+}
+
+
+
 
 /*------------------------------------*\
     # Page Themes
