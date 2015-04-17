@@ -31,7 +31,7 @@ Tabs help you organize and navigate multiple sections of content in a single con
     </div>
 </div>
 {% highlight html %}
-<div class="tab tab--inline" data-tab="">
+<div class="tab tab--inline" data-tab>
     <ul class="tab__block" role="tablist">
         <li class="tab__block__item tab__block__item--selected" role="tab">
             <a href="#tab1-inline" class="tab__block__link">Tab 1</a>
@@ -77,7 +77,7 @@ Tabs help you organize and navigate multiple sections of content in a single con
     </div>
 </div>
 {% highlight html %}
-<div class="tab tab--bar" data-tab="">
+<div class="tab tab--bar" data-tab>
     <ul class="tab__block" role="tablist">
         <li class="tab__block__item tab__block__item--selected"  role="tab">
             <a href="#tab1-bar" class="tab__block__link">Tab 1</a>
@@ -123,7 +123,7 @@ Tabs help you organize and navigate multiple sections of content in a single con
     </div>
 </div>
 {% highlight html %}
-<div class="tab tab--stacked" data-tab="">
+<div class="tab tab--stacked" data-tab>
     <ul class="tab__block" role="tablist">
         <li class="tab__block__item" role="tab">
             <a href="#tab1-stacked" class="tab__block__link">Tab 1</a>
