@@ -39,4 +39,4 @@ include: ['_pages']
 
 
 # Exclude files
-exclude: [bower.json, editorconfig, Gemfile, Gemfile.lock, ./**/*.scss]
+exclude: [travis-runner.sh, bower.json, editorconfig, Gemfile, Gemfile.lock, ./**/*.scss]
