@@ -10,7 +10,7 @@
         ".idea"
     ],
     "dependencies": {
-        "penguin-themes": "git@github.com:bq/penguin-themes.git#master"
+        "penguin-themes": "master"
     },
     "keywords": [
         "penguin",
