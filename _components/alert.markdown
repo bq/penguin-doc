@@ -85,7 +85,7 @@ Alert is a feedback message for the user. This alert can be a success, error, wa
 	<div class="alert alert--info" role="alert" data-alert="">
 	    <div class="alert__content">
 	        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-	        <button type="button" title="close" data-close="alert" class="alert__close">
+	        <button type="button" title="Close" data-close="alert" class="alert__close" aria-label="Close">
 	        	<i class="icon icon--invert" aria-hidden="true">
 	        		<svg style="fill: black;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
 						<polygon points="438.393,374.595 319.757,255.977 438.378,137.348 374.595,73.607 255.995,192.225 137.375,73.622 
@@ -101,7 +101,7 @@ Alert is a feedback message for the user. This alert can be a success, error, wa
 <div class="alert alert--modifier" role="alert" data-alert>
     <div class="alert__content">
         Alert content
-        <button type="button" title="close" data-close="alert" class="alert__close">
+        <button type="button" title="Close" data-close="alert" class="alert__close" aria-label="Close">
             <i class="icon icon--invert" aria-hidden="true">*Your icon here*</i>
             <span class="invisible">Close text</span>
         </button>

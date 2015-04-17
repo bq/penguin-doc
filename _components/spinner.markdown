@@ -28,16 +28,11 @@ Loading spinner.
     </div>
 </div>
 
-
 ##fullscreen spinner
 
 <div class="penguin-example penguin-example--margin">
 	<button class="btn btn--primary btn--spinner-body">Launch in body</button>
 </div>
-
-
-
-
 
 ##how to use
 
@@ -49,10 +44,6 @@ Loading spinner.
 | text              | string  | Fallback text inside spinner           | 'Loading...'               |
 | spinnerClass      | string  | Adds this class to spinner             | 'spinner__element--circle' |
 | show              | boolean | Displays just after creating it        | false                      |
-| backdrop          | boolean | Show layer under spinner               | true                       |
-| backdropClassName | string  | Set this class to backdrop             | 'spinner--backdrop'        |
-| template          | string  | Replace modal content with custom html |                            |
-
 
 Target is the selector where spinner will be shown.
 
@@ -65,9 +56,7 @@ $('target').spinner();
 $('target').spinner{
     spinnerClass: 'spinner__element--circle',
     text: 'Loading...',
-    show: false,
-    backdrop: true,
-    backdropClassName: 'spinner--backdrop'
+    show: false
 };
 
 // Custom template
@@ -76,19 +65,14 @@ $('target').spinner{
 };
 {% endhighlight %}
 
-
-
 ##events
 
-The spinner's target receives the event
+The spinner's target receives the event.
 
 | Event type   | Description                                     | Target                  |
 |--------------|-------------------------------------------------|-------------------------|
 | spinner:show | This event is fired when the spinner is shown.  | 'body' or custom target |
 | spinner:hide | This event is fired when the spinner is hidden. | 'body' or custom target |
-
-
-
 
 {% highlight js %}
 // Show the created spinner

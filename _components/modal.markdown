@@ -104,20 +104,19 @@ $('body').modal({
 });
 {% endhighlight %}
 
-
-###Methods
-
+<div class="penguin-example">
+$('target').modal('show');
+</div>
 {% highlight js %}
-// Create a modal
-var myModal = $.penguin.modal({title: 'My modal'}, '.panel');
-
-// Show the created modal
-myModal.show();
-
-// Hide the created modal
-myModal.hide();
+$('body').modal('show');
 {% endhighlight %}
 
+<div class="penguin-example">
+$('target').modal('hide');
+</div>
+{% highlight js %}
+$('body').modal('hide');
+{% endhighlight %}
 
 ###events
 
@@ -128,7 +127,6 @@ The modal's target which receives the event.
 | modal:show       | This event is fired when the modal is shown.         | relatedTarget or document |
 | modal:hide       | This event is fired when the modal is hidden.        | relatedTarget or document |
 | modal:ajaxLoaded | This event is fired when the ajax content is loaded. | relatedTarget or document |
-
 
 {% highlight js %}
 // Create a modal
@@ -145,13 +143,20 @@ myModal.hide();
 ###creating modal objects
 > $.penguin.modal({options}, [target]);
 
-{% highlight js %}
-// Create a modal
-var myModal = $.penguin.modal({title: 'My modal'}, '.panel');
+###Theme definition
 
-// Show the created modal
-myModal.show();
+{% highlight html %}
+.modal {   
+  &.modal--backdrop {}
 
-// Hide the created modal
-myModal.hide();
+  .modal__dialog {
+    .modal__dialog__content {}
+  }
+  .modal__header {
+    .modal__header__title {} 
+    .icon {} 
+  }  
+  .modal__body {}
+  .modal__footer {} 
+}
 {% endhighlight %}

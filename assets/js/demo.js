@@ -26,6 +26,7 @@ $('.btn--spinner-body').on('click', function() {
         show: true,
         closeable: true
     });
+    setTimeout(function () { $('body').spinner('hide') }, 2000);
 });
 
 // Utils

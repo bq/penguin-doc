@@ -20,7 +20,6 @@ Panel is used to wrap any content inside a box and  if you need you can add drop
 </section>
 {% endhighlight %}
 
-
 ##dropdown panel
 
 <div class="penguin-example">
@@ -50,11 +49,3 @@ Panel is used to wrap any content inside a box and  if you need you can add drop
     </div>
 </section>
 {% endhighlight %}
-
-
-##how to use
-
-| Class modifier     | Description           |
-|--------------------|-----------------------|
-| .paginator--inline | Places items in-line. |
-| .paginator--bar    | Places items in bar.  |
