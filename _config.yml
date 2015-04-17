@@ -2,7 +2,7 @@
 # Site settings
 title: Penguin
 email: front-end@bq.com
-description: Penguin is a lightweight and extensible front-end framework built with Sass to kickstart any web project.
+description: Penguin is a lightweight and extensible front-end framework built with Sass for kickstarting any web project.
 baseurl: ""
 url: "https://penguin.docs.bqws.io"
 
