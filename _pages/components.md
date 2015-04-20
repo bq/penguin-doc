@@ -1042,6 +1042,25 @@ permalink: /components/
         <li>three</li>
         <li>four</li>
     </ol>
+    <dl>
+        <dt><strong>Term A:</strong></dt>
+            <dd>Definition A</dd>
+        <dt><strong>Term B:</strong></dt>
+            <dd>Definition B</dd>
+        <dt><strong>Term C:</strong></dt>
+            <dd>
+                <ul>
+                    <li>Definition C1</li>
+                    <li>Definition C2</li>
+                    <li>
+                        <ol>
+                            <li>Definition C3.1</li>
+                            <li>Definition C3.2</li>
+                        </ol>
+                    </li>
+                </ul>
+            </dd>
+    </dl>
 </div>
 
 
