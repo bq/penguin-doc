@@ -477,7 +477,7 @@ Contains links to other sections of the website.
 
 <div class="penguin-example">
 	<nav class="nav nav--bar" role="navigation">
-	    <h1 class="hidden">Navigation</h1>
+	    <h1 class="hide">Navigation</h1>
 	    <ul class="nav__menu">
 	        <li class="nav__menu__item nav__menu__item--selected">
 	        	<a href="#" class="nav__menu__link">
@@ -545,7 +545,7 @@ Contains links to other sections of the website.
 
 {% highlight html %}
 <nav class="nav nav--bar" role="navigation">
-    <h1 class="hidden">Navigation</h1>
+    <h1 class="hide">Navigation</h1>
     <ul class="nav__menu">
         <li class="nav__menu__item nav__menu__item--selected">
             <a href="#" class="nav__menu__link">
