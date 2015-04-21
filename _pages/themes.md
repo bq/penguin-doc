@@ -36,7 +36,7 @@ grunt build-theme:<theme_name>
 
 ### 4. Share your theme!
 
-Now you have your awesome theme ready to be used for hundreds of developers :) Just maque a pull request to the themes repository [penguin-themes](https://github.com/bq/penguin-themes) and we will check it as soon as possible.
+Now you have your awesome theme ready to be used for hundreds of developers :) Just make a pull request to the themes repository [penguin-themes](https://github.com/bq/penguin-themes) and we will check it as soon as possible.
 
 
 
