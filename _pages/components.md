@@ -14,7 +14,7 @@ permalink: /components/
     </div>
     <div class="theme-bar__col theme-bar__buttons col-a-12">
         <ul class="btn-group">
-            <li>
+            <li class="btn-group__item">
                 <a id="link-github" href="https://github.com/bq/penguin-themes/tree/master/themes/penguin-doc" class="btn" target="_blank">
                     <span class="icon-text">
                         <i class="icon icon--invert"><svg viewBox="0 0 16 16">
@@ -23,7 +23,7 @@ permalink: /components/
                     </span>
                 </a>
             </li>
-            <li>
+            <li class="btn-group__item">
                 <a id="link-css" href="/bower_components/penguin-themes/themes/penguin-doc/dist/css/penguin-doc.css" class="btn" target="_blank">Download CSS (uncompressed)</a>
             </li>
         </ul>
@@ -68,7 +68,7 @@ permalink: /components/
 				<span class="invisible">Close</span>
 			</button>
 	    </div>
-	</div>	
+	</div>
 </div>
 
 <div class="penguin-example">
@@ -97,8 +97,22 @@ permalink: /components/
 </div>
 
 <div class="penguin-example">
+    <div class="penguin-example__row">
+        <button class="btn btn--primary btn--fluid">Fluid</button>
+    </div>
+</div>
+
+<div class="penguin-example">
+    <ul class="btn-group btn-group--fluid">
+        <li class="btn-group__item"><button class="btn btn--primary btn--fluid">Primary</button></li>
+        <li class="btn-group__item"><button class="btn btn--secondary btn--fluid">Secondary</button></li>
+        <li class="btn-group__item"><button class="btn btn--disabled btn--fluid">Disabled</button></li>
+    </ul>
+</div>
+
+<div class="penguin-example">
 	<ul class="btn-group">
-	    <li>
+	    <li class="btn-group__item">
 	        <button class="btn btn--primary">
 	            <span class="icon-text"><i class="icon" aria-hidden="true">
 	            	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -110,7 +124,7 @@ permalink: /components/
 	            </i>Button 1</span>
 	        </button>
 	    </li>
-	    <li>
+	    <li class="btn-group__item">
 	        <button class="btn btn--primary">
 	            <span class="icon-text"><i class="icon" aria-hidden="true">
 	            	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -127,7 +141,7 @@ permalink: /components/
 
 <div class="penguin-example">
     <ul class="btn-group">
-        <li>
+        <li class="btn-group__item">
             <button class="btn btn--primary btn--icon">
                 <i class="icon" aria-hidden="true">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -140,7 +154,7 @@ permalink: /components/
                 <span class="invisible">text</span>
             </button>
         </li>
-        <li>
+        <li class="btn-group__item">
             <button class="btn btn--primary btn--icon ">
                 <i class="icon" aria-hidden="true">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -391,9 +405,11 @@ permalink: /components/
                     </div>
                 </fieldset>
                 <!-- single button -->
-                <div class="btn-group">
-                    <button class="btn btn--primary">Submit</button>
-                </div>
+                <ul class="btn-group">
+                    <li class="btn-group__item">
+                        <button class="btn btn--primary">Submit</button>
+                    </li>
+                </ul>
             </fieldset>
         </form>
     </div>
@@ -436,9 +452,11 @@ permalink: /components/
                             </div>
                             <label for="remember-horizontal">Remember me</label>
                         </div>
-                        <div class="btn-group">
-                            <input type="submit" class="btn btn--primary" value="Login">
-                        </div>
+                        <ul class="btn-group">
+                            <li class="btn-group__item">
+                                <input type="submit" class="btn btn--primary" value="Login">
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </fieldset>
@@ -506,10 +524,14 @@ permalink: /components/
                     </fieldset>
                 </div>
             </div>
-            <div class="btn-group text-right">
-                <input type="reset" class="btn btn--secondary" value="Reset">
-                <input type="submit" class="btn btn--primary" value="Submit">
-            </div>
+            <ul class="btn-group text-right">
+                <li class="btn-group__item">
+                    <input type="reset" class="btn btn--secondary" value="Reset">
+                </li>
+                <li class="btn-group__item">
+                    <input type="submit" class="btn btn--primary" value="Submit">
+                </li>
+            </ul>
         </form>
     </div>
 </div>
@@ -580,7 +602,11 @@ permalink: /components/
                 </div>
                 <div class="row row--collapse">
                     <div class="col-a-12">
-                        <div class="btn-group"><br /><input type="submit" class="btn btn--primary" value="Submit"></div>
+                        <ul class="btn-group">
+                            <li class="btn-group__item">
+                                <input type="submit" class="btn btn--primary" value="Submit">
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </fieldset>
@@ -878,16 +904,16 @@ permalink: /components/
             <div class="demo demo--a demo--spinner">
             </div>
             <ul class="btn-group">
-                <li><button class="btn btn--primary btn--spinner-demo--a">Launch here</button></li>
-                <li><button class="btn btn--primary btn--spinner-clear-a">Clear</button></li>
+                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-demo--a">Launch here</button></li>
+                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-clear-a">Clear</button></li>
             </ul>
         </div>
         <div class="grid__item">
             <div class="demo demo--b demo--spinner">
             </div>
             <ul class="btn-group">
-                <li><button class="btn btn--primary btn--spinner-demo--b">Launch here</button></li>
-                <li><button class="btn btn--primary btn--spinner-clear-b">Clear</button></li>
+                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-demo--b">Launch here</button></li>
+                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-clear-b">Clear</button></li>
             </ul>
         </div>
     </div>

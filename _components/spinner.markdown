@@ -13,16 +13,16 @@ Loading spinner.
             <div class="demo demo--a demo--spinner">
             </div>
             <ul class="btn-group">
-                <li><button class="btn btn--primary btn--spinner-demo--a">Launch here</button></li>
-                <li><button class="btn btn--primary btn--spinner-clear-a">Clear</button></li>
+                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-demo--a">Launch here</button></li>
+                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-clear-a">Clear</button></li>
             </ul>
         </div>
         <div class="grid__item">
             <div class="demo demo--b demo--spinner">
             </div>
             <ul class="btn-group">
-                <li><button class="btn btn--primary btn--spinner-demo--b">Launch here</button></li>
-                <li><button class="btn btn--primary btn--spinner-clear-b">Clear</button></li>
+                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-demo--b">Launch here</button></li>
+                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-clear-b">Clear</button></li>
             </ul>
         </div>
     </div>

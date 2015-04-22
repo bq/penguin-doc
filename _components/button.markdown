@@ -17,12 +17,27 @@ Usually a button indicates a user action.
 		<button class="btn btn--disabled">Disabled</button>
 	</div>
 	<div class="penguin-example__row">
-		<button class="btn btn--btn--custom-name">Custom button</button>
+		<button class="btn btn--custom-name">Custom button</button>
 	</div>
 </div>
 
 {% highlight html %}
-<button class="btn btn--modifier">Button</button>
+<button class="btn btn--primary">Primary</button>
+<button class="btn btn--secondary">Secondary</button>
+<button class="btn btn--disabled">Disabled</button>
+<button class="btn btn--custom-name">Custom button</button>
+{% endhighlight %}
+
+
+##fluid button
+<div class="penguin-example">
+	<div class="penguin-example__row">
+		<button class="btn btn--primary btn--fluid">Fluid</button>
+	</div>
+</div>
+
+{% highlight html %}
+<button class="btn btn--primary btn--fluid">Fluid</button>
 {% endhighlight %}
 
 
@@ -48,10 +63,32 @@ Usually a button indicates a user action.
 </ul>
 {% endhighlight %}
 
+##fluid buttons group
+<div class="penguin-example">
+	<ul class="btn-group btn-group--fluid">
+	    <li class="btn-group__item"><button class="btn btn--primary btn--fluid">Primary</button></li>
+	    <li class="btn-group__item"><button class="btn btn--secondary btn--fluid">Secondary</button></li>
+	    <li class="btn-group__item"><button class="btn btn--disabled btn--fluid">Disabled</button></li>
+	</ul>
+</div>
+{% highlight html %}
+<ul class="btn-group btn-group--fluid">
+    <li class="btn-group__item">
+         <button class="btn">Button</button>
+    </li>
+    <li class="btn-group__item">
+         <button class="btn">Button</button>
+    </li>
+    <li class="btn-group__item">
+         <button class="btn btn--disabled">Disabled</button>
+    </li>
+</ul>
+{% endhighlight %}
+
 ##text &amp; icon buttons
 <div class="penguin-example">
 	<ul class="btn-group">
-	    <li>
+	    <li class="btn-group__item">
 	        <button class="btn btn--primary">
 	            <span class="icon-text"><i class="icon" aria-hidden="true">
 	            	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -63,7 +100,7 @@ Usually a button indicates a user action.
 	            </i>Button 1</span>
 	        </button>
 	    </li>
-	    <li>
+	    <li class="btn-group__item">
 	        <button class="btn btn--primary">
 	            <span class="icon-text"><i class="icon" aria-hidden="true">
 	            	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -79,14 +116,14 @@ Usually a button indicates a user action.
 </div>
 {% highlight html %}
 <ul class="btn-group">
-    <li>
+    <li class="btn-group__item">
         <button class="btn btn--modifier">
             <span class="icon-text">
                 <i class="icon" aria-hidden="true">*Your icon here*</i>Button 1
             </span>
         </button>
     </li>
-    <li>
+    <li class="btn-group__item">
         <button class="btn btn--modifier">
             <span class="icon-text">
                 <i class="icon" aria-hidden="true">*Your icon here*</i>Button 2
@@ -99,7 +136,7 @@ Usually a button indicates a user action.
 ##just icon buttons
 <div class="penguin-example">
 	<ul class="btn-group">
-	    <li>
+	    <li class="btn-group__item">
 	        <button class="btn btn--primary btn--icon">
 	            <i class="icon" aria-hidden="true">
 	            	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -112,7 +149,7 @@ Usually a button indicates a user action.
 	            <span class="invisible">text</span>
 	        </button>
 	    </li>
-	    <li>
+	    <li class="btn-group__item">
 	        <button class="btn btn--primary btn--icon ">
 	            <i class="icon" aria-hidden="true">
 	            	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -141,13 +178,13 @@ Usually a button indicates a user action.
 </div>
 {% highlight html %}
 <ul class="btn-group">
-    <li>
+    <li class="btn-group__item">
         <button class="btn btn--modifier btn--icon">
             <i class="icon" aria-hidden="true">*Your icon here*</i>
             <span class="invisible">text</span>
         </button>
     </li>
-    <li>
+    <li class="btn-group__item">
         <button class="btn btn--modifier btn--icon">
             <i class="icon" aria-hidden="true">*Your icon here*</i>
             <span class="invisible">text</span>

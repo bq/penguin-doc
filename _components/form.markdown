@@ -86,11 +86,12 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
                 <!-- input type="checkbox" -->
                 <fieldset>
                     <legend>Checkbox</legend>
+
                     <div class="form-control">
                         <span class="input input--checkbox">
                             <input type="checkbox" id="remember-1" name="remember">
+                            <label for="remember-1">Checkbox 1</label>
                         </span>
-                        <label for="remember-1">Checkbox 1</label>
                     </div>
                     <div class="form-control">
                         <span class="input input--checkbox">
@@ -116,9 +117,9 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
                     </div>
                 </fieldset>
                 <!-- single button -->
-                <div class="btn-group">
-                    <button class="btn btn--primary">Submit</button>
-                </div>
+                <ul class="btn-group">
+                    <li class="btn-group__item"><button class="btn btn--primary">Submit</button></li>
+                </ul>
             </fieldset>
         </form>
     </div>
@@ -217,9 +218,9 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
                 </div>
             </fieldset>
             <!-- single button -->
-            <div class="btn-group">
-                <button class="btn btn--primary">Submit</button>
-            </div>
+            <ul class="btn-group">
+                <li class="btn-group__item"><button class="btn btn--primary">Submit</button></li>
+            </ul>
         </fieldset>
     </form>
 </div>
@@ -263,9 +264,11 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
                             </div>
                             <label for="remember-horizontal">Remember me</label>
                         </div>
-                        <div class="btn-group">
-                            <input type="submit" class="btn btn--primary" value="Login">
-                        </div>
+                        <ul class="btn-group">
+                            <li class="btn-group__item">
+                                <input type="submit" class="btn btn--primary" value="Login">
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </fieldset>
@@ -309,9 +312,11 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
                         </div>
                         <label for="remember-horizontal">Remember me</label>
                     </div>
-                    <div class="btn-group">
-                        <input type="submit" class="btn btn--primary" value="Login">
-                    </div>
+                    <ul class="btn-group">
+                        <li class="btn-group__item">
+                            <input type="submit" class="btn btn--primary" value="Login">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </fieldset>
@@ -384,10 +389,14 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
             </div>
             <div class="row">
                 <div class="col-a-12">
-                    <div class="btn-group align-right">
-                        <input type="reset" class="btn btn--secondary" value="Reset">
-                        <input type="submit" class="btn btn--primary" value="Submit">
-                    </div>
+                    <ul class="btn-group align-right">
+                        <li class="btn-group__item">
+                            <input type="reset" class="btn btn--secondary" value="Reset">
+                        </li>
+                        <li class="btn-group__item">
+                            <input type="submit" class="btn btn--primary" value="Submit">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </form>
@@ -456,10 +465,14 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
         </div>
         <div class="row">
             <div class="col-a-12">
-                <div class="btn-group align-right">
-                    <input type="reset" class="btn btn--secondary" value="Reset">
-                    <input type="submit" class="btn btn--primary" value="Submit">
-                </div>
+                <ul class="btn-group align-right">
+                    <li class="btn-group__item">
+                        <input type="reset" class="btn btn--secondary" value="Reset">
+                    </li>
+                    <li class="btn-group__item">
+                        <input type="submit" class="btn btn--primary" value="Submit">
+                    </li>
+                </ul>
             </div>
         </div>
     </form>
@@ -535,7 +548,9 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
                 </div>
                 <div class="row row--collapse">
                     <div class="col-a-12">
-                        <div class="btn-group"><br /><input type="submit" class="btn btn--primary" value="Submit"></div>
+                        <ul class="btn-group">
+                            <li class="btn-group__item"><input type="submit" class="btn btn--primary" value="Submit"></li>
+                        </ul>
                     </div>
                 </div>
             </fieldset>
@@ -609,15 +624,17 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
             </div>
             <div class="row row--collapse">
                 <div class="col-a-12">
-                    <div class="btn-group"><input type="submit" class="btn btn--primary" value="Submit"></div>
+                    <ul class="btn-group">
+                        <li class="btn-group__item">
+                            <input type="submit" class="btn btn--primary" value="Submit">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </fieldset>
     </form>
 </div>
 {% endhighlight %}
-
-
 
 
 ##How to use
@@ -628,6 +645,6 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
 | fieldset      | Group form controls (optional)             |                                             |
 | legend        | Caption for group from controls (optional) | .invisible                                  |
 | label         | Label for input                            | .invisible                                  |
-| span.input    | Input container                            | .input--icon                                |
+| span.input    | Input container                            | .input--icon               |
 | input         | Element form                               |                                             |
 | i.icon        | Icon element                               | .icon--type + aria-hidden="true" attribute. |
