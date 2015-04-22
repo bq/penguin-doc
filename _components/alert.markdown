@@ -7,25 +7,21 @@ Alert is a feedback message for the user. This alert can be a success, error, wa
 
 ##simple alert
 <div class="penguin-example">
-	<p class="modifier">.alert--sucess</p>
 	<div class="alert alert--success" role="alert" data-alert>
 	    <div class="alert__content">
 	        <strong>Well done!</strong> You successfully read this important alert message.
 	    </div>
 	</div>
-	<p class="modifier">.alert--error</p>
 	<div class="alert alert--error" role="alert" data-alert>
 	    <div class="alert__content">
 	        <strong>Oh snap!</strong> Change a few things up and try submitting again.
 	    </div>
 	</div>
-	<p class="modifier">.alert--info</p>
 	<div class="alert alert--info" role="alert" data-alert>
 	    <div class="alert__content">
 	        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
 	    </div>
 	</div>
-	<p class="modifier">.alert--warning</p>
 	<div class="alert alert--warning" role="alert" data-alert>
 		<div class="alert__content">
 	        <strong>Warning!</strong> Better check yourself, you're not looking too good.
@@ -33,9 +29,24 @@ Alert is a feedback message for the user. This alert can be a success, error, wa
 	</div>
 </div>
 {% highlight html %}
-<div class="alert alert--modifier" role="alert" data-alert>
+<div class="alert alert--success" role="alert" data-alert>
     <div class="alert__content">
-        Alert content
+        <strong>Well done!</strong> You successfully read this important alert message.
+    </div>
+</div>
+<div class="alert alert--error" role="alert" data-alert>
+    <div class="alert__content">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+    </div>
+</div>
+<div class="alert alert--info" role="alert" data-alert>
+    <div class="alert__content">
+        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+    </div>
+</div>
+<div class="alert alert--warning" role="alert" data-alert>
+    <div class="alert__content">
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
     </div>
 </div>
 {% endhighlight %}
@@ -46,21 +57,18 @@ Alert is a feedback message for the user. This alert can be a success, error, wa
 
 ##alert inline with align
 <div class="penguin-example">
-	<p class="modifier">.alert--inline</p>
 	<div class="alert alert--success alert--inline" role="alert" data-alert="">
 	    <div class="alert__content">
 	        <strong>Well done!</strong> You successfully read this important alert message.
 	    </div>
 	</div>
 
-	<p class="modifier">.alert--inline.alert--center</p>
 	<div class="alert alert--error alert--inline alert--center" role="alert" data-alert="">
 	    <div class="alert__content">
 	        <strong>Oh snap!</strong> Change a few things up and try submitting again.
 	    </div>
 	</div>
 
-	<p class="modifier">.alert--inline.alert--right</p>
 	<div class="alert alert--info alert--inline alert--right" role="alert" data-alert="">
 	    <div class="alert__content">
 	        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
@@ -68,9 +76,21 @@ Alert is a feedback message for the user. This alert can be a success, error, wa
 	</div>
 </div>
 {% highlight html %}
-<div class="alert alert--inline alert--modifier" role="alert" data-alert>
+<div class="alert alert--success alert--inline" role="alert" data-alert="">
     <div class="alert__content">
-        Alert content
+        <strong>Well done!</strong> You successfully read this important alert message.
+    </div>
+</div>
+
+<div class="alert alert--error alert--inline alert--center" role="alert" data-alert="">
+    <div class="alert__content">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+    </div>
+</div>
+
+<div class="alert alert--info alert--inline alert--right" role="alert" data-alert="">
+    <div class="alert__content">
+        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
     </div>
 </div>
 {% endhighlight %}
