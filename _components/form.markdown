@@ -636,6 +636,195 @@ A form displays a set of related fields: input, textarea, select, checkbox, radi
 </div>
 {% endhighlight %}
 
+##custom elements
+
+> You can create your own __custom form elements__. Only add the $appearance() mixin to remove default appearance and start customizing. Works in selects, radio buttons, and checkboxes.
+
+{% highlight scss %}
+.input--radio,
+.input--select,
+.input--checkbox {
+
+    input {
+        @include appearance(none);
+       /*Your custom styles*/
+    }
+
+}
+{% endhighlight %}
+
+
+<div class="penguin-example">
+    <div class="form">
+        <form id="form-custom">
+            <fieldset>
+                <legend>Select</legend>
+                <!-- select custom -->
+                <div class="form-control">
+                    <label for="select" class="invisible">Select</label>
+                    <span class="input input--custom">
+                        <select id="select-custom" name="select-custom">
+                            <option>Item 1</option>
+                            <option>Item 2</option>
+                            <option>Item 3</option>
+                            <option>Item 4</option>
+                            <option>Item 5</option>
+                        </select>
+                    </span>
+                </div>
+            </fieldset>
+            <!-- input type="checkbox" -->
+            <fieldset>
+                <legend>Checkbox</legend>
+
+                <div class="form-control">
+                    <span class="input input--checkbox input--custom">
+                        <input type="checkbox" id="checkbox-1-custom" name="remember">
+                        <label for="checkbox-1-custom">Checkbox 1</label>
+                    </span>
+                </div>
+                <div class="form-control">
+                    <span class="input input--checkbox input--custom">
+                        <input type="checkbox" id="checkbox-2-custom" name="remember">
+                    </span>
+                    <label for="checkbox-2-custom">Checkbox 2</label>
+                </div>
+            </fieldset>
+            <!-- input type="radio" -->
+            <fieldset>
+                <legend>Radios</legend>
+                <div class="form-control form-control--inline">
+                    <span class="input input--radio input--custom">
+                        <input type="radio" id="radio-1-custom" name="radio-custom" value="radio-1">
+                    </span>
+                    <label for="radio-1-custom">Radio 1</label>
+                </div>
+                <div class="form-control form-control--inline">
+                    <span class="input input--radio input--custom">
+                        <input type="radio" id="radio-2-custom" name="radio-custom" value="radio-2">
+                    </span>
+                    <label for="radio-2-custom">Radio 2</label>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{% highlight html %}
+    <div class="form">
+        <form id="form-custom">
+            <fieldset>
+                <legend>Select</legend>
+                <!-- select custom -->
+                <div class="form-control">
+                    <label for="select" class="invisible">Select</label>
+                    <span class="input input--select">
+                        <select id="select-custom" name="select-custom">
+                            <option>Item 1</option>
+                            <option>Item 2</option>
+                            <option>Item 3</option>
+                            <option>Item 4</option>
+                            <option>Item 5</option>
+                        </select>
+                    </span>
+                </div>
+            </fieldset>
+            <!-- input type="checkbox" -->
+            <fieldset>
+                <legend>Checkbox</legend>
+
+                <div class="form-control">
+                    <span class="input input--checkbox">
+                        <input type="checkbox" id="checkbox-1-custom" name="remember">
+                        <label for="checkbox-1-custom">Checkbox 1</label>
+                    </span>
+                </div>
+                <div class="form-control">
+                    <span class="input input--checkbox">
+                        <input type="checkbox" id="checkbox-2-custom" name="remember">
+                    </span>
+                    <label for="checkbox-2-custom">Checkbox 2</label>
+                </div>
+            </fieldset>
+            <!-- input type="radio" -->
+            <fieldset>
+                <legend>Radios</legend>
+                <div class="form-control form-control--inline">
+                    <span class="input input--radio">
+                        <input type="radio" id="radio-1-custom" name="radio-custom" value="radio-1">
+                    </span>
+                    <label for="radio-1-custom">Radio 1</label>
+                </div>
+                <div class="form-control form-control--inline">
+                    <span class="input input--radio">
+                        <input type="radio" id="radio-2-custom" name="radio-custom" value="radio-2">
+                    </span>
+                    <label for="radio-2-custom">Radio 2</label>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+{% endhighlight %}
+
+
+> You can create something like this. The next example don't be included in default theme, it's only a simple demo.
+
+<div class="penguin-example penguin-example--margin">
+    <div class="form">
+        <form id="form-custom-example">
+            <fieldset>
+                <legend>Select</legend>
+                <!-- select custom -->
+                <div class="form-control">
+                    <label for="select-example" class="invisible">Select</label>
+                    <span class="input input--select input--example">
+                        <select id="select-example" name="select">
+                            <option>Item 1</option>
+                            <option>Item 2</option>
+                            <option>Item 3</option>
+                            <option>Item 4</option>
+                            <option>Item 5</option>
+                        </select>
+                    </span>
+                </div>
+                <!-- input type="checkbox" -->
+                <fieldset>
+                    <legend>Checkbox</legend>
+
+                    <div class="form-control">
+                        <span class="input input--checkbox input--example">
+                            <input type="checkbox" id="check-example-1" name="check-example-1">
+                            <label for="check-example-1">Checkbox 1</label>
+                        </span>
+                    </div>
+                    <div class="form-control">
+                        <span class="input input--checkbox input--example">
+                            <input type="checkbox" id="check-example-2" name="check-example-2">
+                            <label for="check-example-2">Checkbox 2</label>
+                        </span>
+                    </div>
+                </fieldset>
+                <!-- input type="radio" -->
+                <fieldset>
+                    <legend>Radios</legend>
+                    <div class="form-control form-control--inline">
+                        <span class="input input--radio input--example">
+                            <input type="radio" id="radio-example-1" name="radio-example" value="radio-1">
+                            <label for="radio-example-1">Radio 1</label>
+                        </span>
+                    </div>
+                    <div class="form-control form-control--inline">
+                        <span class="input input--radio input--example">
+                            <input type="radio" id="radio-example-2" name="radio-example" value="radio-2">
+                            <label for="radio-example-2">Radio 2</label>
+                        </span>
+                    </div>
+                </fieldset>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
 
 ##How to use
 
