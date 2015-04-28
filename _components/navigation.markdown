@@ -581,8 +581,80 @@ Contains links to other sections of the website.
 
 ##how to use
 
-| Class modifier | Description              |
-|----------------|--------------------------|
-| .nav--inline   | Places items in-line.    |
-| .nav--bar      | Places items in bar.     |
-| .nav--stacked  | Places items in stacked. |
+| Class modifier | Description                  |
+|----------------|------------------------------|
+| .nav--inline   | Places items in-line.        |
+| .nav--bar      | Places items in bar.         |
+| .nav--stacked  | Places items in stacked.     |
+| .nav--fluid    | Places nav with fluid width. |
+
+
+##responsive
+
+You can get more info about $slicer-breakpoints and $slicer-breakpoint-names in [grid components section](../grid/).
+
+{% highlight scss %}
+// Breakpoints
+$slicer-breakpoints       : 0   400px   600px   800px   1050px;
+$slicer-breakpoint-names  :  'a'     'b'     'c'     'd'      'e';
+{% endhighlight %}
+
+
+
+> To use this component in a responsive project you have different options:
+
+[Breakpoint-slicer](https://github.com/lolmaus/breakpoint-slicer):
+{% highlight scss %}
+.nav {
+    // Common styles
+
+    @include to(c) {
+        @include nav--bar;
+    }
+
+    @include from(d) {
+        @include nav--stacked;
+    }
+
+}
+{% endhighlight %}
+
+
+Default media query:
+{% highlight scss %}
+.nav {
+    //Common styles
+
+    @media (max-width: 799px) {
+        @include nav--bar;
+    }
+
+    @media (min-width: 800px) {
+        @include nav--stacked;
+    }
+
+}
+{% endhighlight %}
+
+@include media-minwidth, a penguin mixin:
+
+{% highlight scss %}
+.nav {
+    @include nav--bar;
+
+    @mixin media-minwidth(d) {
+        // Custom styles
+    }
+}
+{% endhighlight %}
+
+##custom nav
+
+You can create your own custom nav.
+
+{% highlight scss %}
+.nav--custom {
+    @include nav--inline;
+    // Custom styles
+}
+{% endhighlight %}
