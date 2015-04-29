@@ -261,3 +261,75 @@ A dropdown is used to show/hide additional content.
 
 > Just add [data-rel="dropdown"] to a link or any element with the [src] attribute and link to element who want toggles hidden it.
 The dropdown plugin toggling the '.dropdown--selected' class and [data-selected] attribute on dropdown element.
+
+
+##responsive
+
+You can get more info about $slicer-breakpoints and $slicer-breakpoint-names in [grid components section](../grid/).
+
+{% highlight scss %}
+// Breakpoints
+$slicer-breakpoints       : 0   400px   600px   800px   1050px;
+$slicer-breakpoint-names  :  'a'     'b'     'c'     'd'      'e';
+{% endhighlight %}
+
+
+
+> To use this component in a responsive project you have different options:
+
+[Breakpoint-slicer](https://github.com/lolmaus/breakpoint-slicer):
+{% highlight scss %}
+.dropdown {
+    // Common styles
+
+    @include to(c) {
+        @include dropdown--stacked;
+    }
+
+    @include from(d) {
+        @include dropdown--fluid;
+    }
+
+}
+{% endhighlight %}
+
+
+Default media query:
+
+{% highlight scss %}
+.dropdown {
+    //Common styles
+
+    @media (max-width: 799px) {
+        @include dropdown--stacked;
+    }
+
+    @media (min-width: 800px) {
+        @include dropdown--fluid;
+    }
+
+}
+{% endhighlight %}
+
+@include media-minwidth, a penguin mixin:
+
+{% highlight scss %}
+.dropdown {
+    @include dropdown--stacked;
+
+    @mixin media-minwidth(d) {
+        // Custom styles
+    }
+}
+{% endhighlight %}
+
+##custom dropdown
+
+You can create your own custom dropdown.
+
+{% highlight scss %}
+.dropdown--custom {
+    @include dropdown--fluid;
+    // Custom styles
+}
+{% endhighlight %}
