@@ -158,3 +158,74 @@ Tabs help you organize and navigate multiple sections of content in a single con
 | .tab--inline   | Places items in-line.    |
 | .tab--bar      | Places items in bar.     |
 | .tab--stacked  | Places items in stacked. |
+
+
+##responsive
+
+You can get more info about $slicer-breakpoints and $slicer-breakpoint-names in [grid components section](../grid/).
+
+{% highlight scss %}
+// Breakpoints
+$slicer-breakpoints       : 0   400px   600px   800px   1050px;
+$slicer-breakpoint-names  :  'a'     'b'     'c'     'd'      'e';
+{% endhighlight %}
+
+
+
+> To use this component in a responsive project you have different options:
+
+[Breakpoint-slicer](https://github.com/lolmaus/breakpoint-slicer):
+{% highlight scss %}
+.tab {
+    // Common styles
+
+    @include to(c) {
+        @include tab--bar;
+    }
+
+    @include from(d) {
+        @include tab--stacked;
+    }
+
+}
+{% endhighlight %}
+
+
+Default media query:
+{% highlight scss %}
+.tab {
+    //Common styles
+
+    @media (max-width: 799px) {
+        @include tab--bar;
+    }
+
+    @media (min-width: 800px) {
+        @include tab--stacked;
+    }
+
+}
+{% endhighlight %}
+
+@include media-minwidth, a penguin mixin:
+
+{% highlight scss %}
+.tab {
+    @include tab--bar;
+
+    @mixin media-minwidth(d) {
+        // Custom styles
+    }
+}
+{% endhighlight %}
+
+##custom tab
+
+You can create your own custom tab.
+
+{% highlight scss %}
+.tab--custom {
+    @include tab--inline;
+    // Custom styles
+}
+{% endhighlight %}
