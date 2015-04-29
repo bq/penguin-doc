@@ -99,3 +99,75 @@ Paginator is a type of navigation that lets users navigate through related pages
 |--------------------|-----------------------|
 | .paginator--inline | Places items in-line. |
 | .paginator--bar    | Places items in bar.  |
+
+
+##responsive
+
+You can get more info about $slicer-breakpoints and $slicer-breakpoint-names in [grid components section](../grid/).
+
+{% highlight scss %}
+// Breakpoints
+$slicer-breakpoints       : 0   400px   600px   800px   1050px;
+$slicer-breakpoint-names  :  'a'     'b'     'c'     'd'      'e';
+{% endhighlight %}
+
+
+
+> To use this component in a responsive project you have different options:
+
+[Breakpoint-slicer](https://github.com/lolmaus/breakpoint-slicer):
+{% highlight scss %}
+.paginator {
+    // Common styles
+
+    @include to(c) {
+        @include paginator--bar;
+    }
+
+    @include from(d) {
+        @include paginator--inline;
+    }
+
+}
+{% endhighlight %}
+
+
+Default media query:
+
+{% highlight scss %}
+.paginator {
+    //Common styles
+
+    @media (max-width: 799px) {
+        @include paginator--bar;
+    }
+
+    @media (min-width: 800px) {
+        @include paginator--inline;
+    }
+
+}
+{% endhighlight %}
+
+@include media-minwidth, a penguin mixin:
+
+{% highlight scss %}
+.paginator {
+    @include paginator--bar;
+
+    @mixin media-minwidth(d) {
+        // Custom styles
+    }
+}
+{% endhighlight %}
+
+##custom paginator
+
+You can create your own custom paginator.
+
+{% highlight scss %}
+.paginator--custom {
+    @include paginator--inline;
+    // Custom styles
+}
+{% endhighlight %}
