@@ -138,6 +138,7 @@ Alert is a feedback message for the user. This alert can be a success, error, wa
 | .alert--inline                                             | Places alert inline with fluid width. |
 | .alert--inline alert--center                               | Centers the alert.                    |
 | .alert--inline alert--right                                | Align to right the alert.             |
+| .alert--top                                                | Places alert on the parent's top      |
 
 
 > Add [data-alert] attribute to element and [data-close="alert"] to your close button to automatically give an alert close functionality.
@@ -148,4 +149,76 @@ var $alert = $('target').alert();
 
 // Closes an alert by removing it from the DOM
 $alert.hide();
+{% endhighlight %}
+
+
+##responsive
+
+You can get more info about $slicer-breakpoints and $slicer-breakpoint-names in [grid components section](../grid/).
+
+{% highlight scss %}
+// Breakpoints
+$slicer-breakpoints       : 0   400px   600px   800px   1050px;
+$slicer-breakpoint-names  :  'a'     'b'     'c'     'd'      'e';
+{% endhighlight %}
+
+
+
+> To use this component in a responsive project you have different options:
+
+[Breakpoint-slicer](https://github.com/lolmaus/breakpoint-slicer):
+{% highlight scss %}
+.alert {
+    // Common styles
+
+    @include to(c) {
+        @include alert--top;
+    }
+
+    @include from(d) {
+        @include alert--inline;
+    }
+
+}
+{% endhighlight %}
+
+
+Default media query:
+
+{% highlight scss %}
+.alert {
+    //Common styles
+
+    @media (max-width: 799px) {
+        @include alert--top;
+    }
+
+    @media (min-width: 800px) {
+        @include alert--inline;
+    }
+
+}
+{% endhighlight %}
+
+@include media-minwidth, a penguin mixin:
+
+{% highlight scss %}
+.alert {
+    @include alert--inline;
+
+    @mixin media-minwidth(d) {
+        // Custom styles
+    }
+}
+{% endhighlight %}
+
+##custom alert
+
+You can create your own custom alert.
+
+{% highlight scss %}
+.alert--custom {
+    @include alert--inline;
+    // Custom styles
+}
 {% endhighlight %}
