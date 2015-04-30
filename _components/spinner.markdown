@@ -6,33 +6,12 @@ title:  "Spinner"
 Loading spinner.
 
 ##target spinner
+{% include components/spinner/spinner-simple.html %}
 
-<div class="penguin-example penguin-example--margin">
-    <div class="grid grid--2col">
-        <div class="grid__item">
-            <div class="demo demo--a demo--spinner">
-            </div>
-            <ul class="btn-group">
-                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-demo--a">Launch here</button></li>
-                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-clear-a">Clear</button></li>
-            </ul>
-        </div>
-        <div class="grid__item">
-            <div class="demo demo--b demo--spinner">
-            </div>
-            <ul class="btn-group">
-                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-demo--b">Launch here</button></li>
-                <li class="btn-group__item"><button class="btn btn--primary btn--spinner-clear-b">Clear</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
 
 ##fullscreen spinner
+{% include components/spinner/spinner-fullscreen.html %}
 
-<div class="penguin-example penguin-example--margin">
-    <button class="btn btn--primary btn--spinner-body">Launch in body</button>
-</div>
 
 ##how to use
 
