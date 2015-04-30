@@ -30,46 +30,12 @@ permalink: /components/
     </div>
 </div>
 
-<div class="penguin-example">
-	<p class="modifier">.alert--sucess</p>
-	<div class="alert alert--success" role="alert" data-alert>
-	    <div class="alert__content">
-	        <strong>Well done!</strong> You successfully read this important alert message.
-	    </div>
-	</div>
-	<p class="modifier">.alert--error</p>
-	<div class="alert alert--error" role="alert" data-alert>
-	    <div class="alert__content">
-	        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-	    </div>
-	</div>
-	<p class="modifier">.alert--info</p>
-	<div class="alert alert--info" role="alert" data-alert>
-	    <div class="alert__content">
-	        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-	    </div>
-	</div>
-	<p class="modifier">.alert--warning</p>
-	<div class="alert alert--warning" role="alert" data-alert>
-	    <div class="alert__content">
-	        <strong>Warning!</strong> Better check yourself, you're not looking too good.
-	    </div>
-	</div>
-	<div class="alert alert--info" role="alert" data-alert="">
-	    <div class="alert__content">
-	        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-	        <button type="button" title="close" data-close="alert" class="alert__close">
-	        	<i class="icon icon--invert" aria-hidden="true">
-	        		<svg style="fill: black;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-						<polygon points="438.393,374.595 319.757,255.977 438.378,137.348 374.595,73.607 255.995,192.225 137.375,73.622 
-				73.607,137.352 192.246,255.983 73.622,374.625 137.352,438.393 256.002,319.734 374.652,438.378 "/>
-					</svg>
-				</i>
-				<span class="invisible">Close</span>
-			</button>
-	    </div>
-	</div>
-</div>
+<!-- Alerts -->
+{% include components/alert/alert-simple.html %}
+{% include components/alert/alert-closeable.html %}
+
+
+<!-- Breadcrumb -->
 
 <div class="penguin-example">
 	<nav class="breadcrumb" role="navigation">
