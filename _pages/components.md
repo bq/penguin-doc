@@ -73,31 +73,9 @@ permalink: /components/
 {% include components/nav/nav-stacked-dropdown.html %}
 {% include components/nav/nav-bar-icon.html %}
 
-<div class="penguin-example">
-    <ul class="paginator paginator--inline">
-        <li class="paginator__item"><a href="#" class="paginator__link">First</a></li>
-        <li class="paginator__item"><a href="#" class="paginator__link">Previous</a></li>
-        <li class="paginator__item paginator__item--selected"><a href="#" class="paginator__link">1</a></li>
-        <li class="paginator__item"><a href="#" class="paginator__link">2</a></li>
-        <li class="paginator__item"><a href="#" class="paginator__link">3</a></li>
-        <li class="paginator__item"><a href="#" class="paginator__link">4</a></li>
-        <li class="paginator__item"><a href="#" class="paginator__link">Next</a></li>
-        <li class="paginator__item"><a href="#" class="paginator__link">Last</a></li>
-    </ul>
-</div>
-
-<div class="penguin-example">
-	<ul class="paginator paginator--bar">
-	    <li class="paginator__item"><a href="#" class="paginator__link">First</a></li>
-	    <li class="paginator__item"><a href="#" class="paginator__link">Previous</a></li>
-	    <li class="paginator__item paginator__item--selected"><a href="#" class="paginator__link">1</a></li>
-	    <li class="paginator__item"><a href="#" class="paginator__link">2</a></li>
-	    <li class="paginator__item"><a href="#" class="paginator__link">3</a></li>
-	    <li class="paginator__item"><a href="#" class="paginator__link">4</a></li>
-	    <li class="paginator__item"><a href="#" class="paginator__link">Next</a></li>
-	    <li class="paginator__item"><a href="#" class="paginator__link">Last</a></li>
-	</ul>
-</div>
+<!-- Paginator -->
+{% include components/paginator/paginator-inline.html %}
+{% include components/paginator/paginator-bar.html %}
 
 <div class="penguin-example">
 	<section class="panel panel--dropdown">
