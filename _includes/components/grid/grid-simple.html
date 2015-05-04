@@ -1,43 +1,3 @@
----
-layout: component
-title:  "Grid"
----
-
-Grids on demand are awesome. They are semantic, flexible and powerful. We combine [susy](http://susy.oddbird.net/) with [breakpoint-slicer](https://github.com/lolmaus/breakpoint-slicer) and [breakpoint](https://github.com/at-import/breakpoint) to manage the layout, the grid and the breakpoints.
-
-If grids on demand don't like you doesn't matter penguin has a solution. By default **penguin includes a grid system** allows you to create a responsive grid layout just using the proper css classes. Be sure set to true the $grid-system variable.
-
-By default, these are the sass variables values:
-
-{% highlight scss %}
-// Grid
-$grid-columns             : 12;
-$grid-gutter              : 30;
-{% endhighlight %}
-
-###breakpoints
-
-Also we can set breakpoints, and their names:
-
-{% highlight scss %}
-// Breakpoints
-$slicer-breakpoints       : 0   400px   600px   800px   1050px;
-$slicer-breakpoint-names  :  'a'     'b'     'c'     'd'      'e';
-{% endhighlight %}
-
-####generated grid example
-
-| Slicer name    | mediaquery                                  |
-|----------------|---------------------------------------------|
-| a              | (max-width: 400px)                          |
-| b              | (min-width: 401px) and (max-width: 600)     |
-| c              | (min-width: 601px) and (max-width: 800)     |
-| d              | (min-width: 801px) and (max-width: 1050)    |
-| e              | (min-width: 1050px)                         |
-
-{% include components/grid/grid-simple.html %}
-
-{% highlight html %}
 <div class="row penguin-example">
     <!-- 12 -->
     <div class="col-a-12 col-c-12 col-d-12 col-e-12">
@@ -104,7 +64,8 @@ $slicer-breakpoint-names  :  'a'     'b'     'c'     'd'      'e';
     </div>
     <div class="col-a-4 col-b-3 col-c-4 col-d-4 col-e-4">
         <span class="fill-col">.col-[var]-4</span>
-    </div><br>    <!-- 3 -->
+    </div>
+    <!-- 3 -->
     <div class="col-a-3 col-b-3 col-c-3 col-d-3 col-e-3">
         <span class="fill-col">.col-[var]-3</span>
     </div>
@@ -174,4 +135,3 @@ $slicer-breakpoint-names  :  'a'     'b'     'c'     'd'      'e';
         <span class="fill-col">.col-[var]-1</span>
     </div>
 </div>
-{% endhighlight %}
