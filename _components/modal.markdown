@@ -6,10 +6,8 @@ title:  "Modal"
 A modal is a dialog prompt, like a pop-up window, that temporarily blocks interactions with the site.
 
 ##Full screen modal
+{% include components/modal/modal-full.html %}
 
-<div class="penguin-example">
-	<button class="btn btn--primary" data-rel="modal" data-modal="{title: 'Modal', content: 'Content', closeable: true, buttons: {align: 'right', btn: [{text: 'Accept', className: 'btn btn--primary'}]}}">Modal</button>
-</div>
 {% highlight html %}
 <button class="btn btn--primary" data-rel="modal" data-modal="{title: 'Modal', content: 'Content', closeable: true, buttons: {align: 'right', btn: [{text: 'Accept', className: 'btn btn--primary'}]}}">
 	Modal
@@ -18,11 +16,8 @@ A modal is a dialog prompt, like a pop-up window, that temporarily blocks intera
 
 
 ##Target modal
+{% include components/modal/modal-target.html %}
 
-<div class="penguin-example">
-	<div class="demo demo--target"></div>
-	<button class="btn btn--primary" data-rel="modal" data-target=".demo--target" data-modal="{title: 'Modal', content: 'Content', buttons: {btn: [{text: 'Accept', className: 'btn btn--primary'}]}}">Target modal</button>
-</div>
 {% highlight html %}
 <button class="btn btn--primary" data-rel="modal" data-target=".demo--target" data-modal="{title: 'Modal', content: 'Content', buttons: {btn: [{text: 'Accept', className: 'btn btn--primary'}]}}">
 	Target modal
