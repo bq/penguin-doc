@@ -5,20 +5,8 @@ title:  "Utils"
 Penguin has defined default classes to help you in common cases
 
 ##floating content
+{% include components/utils/utils-floating.html %}
 
-<div class="penguin-example">
-	<div class="clearfix">
-		<div class="box center-block">Center block</div>
-	</div>
-	<div class="clearfix">
-		<div class="box pull-right">Pull right</div>
-		<div class="box pull-left">Pull left</div>
-		<div class="box pull-left">Pull left</div>
-	</div>
-	<div class="clearfix">
-		<div class="box pull-left">Pull left</div>
-	</div>
-</div>
 {% highlight html %}
 <div class="clearfix">
     <div class="box center-block">Center block</div>
@@ -59,20 +47,7 @@ Penguin has defined default classes to help you in common cases
 </table>
 
 ##visibility
-
-<div class="penguin-example clearfix">
-	<div class="penguin-example__row">
-		<div id="box" class="box box--block show">Box</div>
-	</div>
-	<div class="penguin-example__row">
-		<button class="btn btn--primary" data-toggle="#box"><span>Show/ Hide</span> box</button>
-	</div>
-</div>
-<div id="toggling-content">
-	{% highlight html %}
-	<div class="box show">Box</div>
-	{% endhighlight %}
-</div>
+{% include components/utils/utils-visibility.html %}
 
 <table>
     <thead>
@@ -105,49 +80,7 @@ Penguin has defined default classes to help you in common cases
 .hidden-[breakpoint-name]
 {% endhighlight %}
 
-
-<div class="penguin-example row">
-	<div class="row">
-		<div class="col-a-12 col-b-6">
-			<div class="box box--block hidden-a">Box hidden at 'a' breakpoint</div>
-		</div>
-		<div class="col-a-12 col-b-6">
-			<div class="box box--block visible-a">Box visible at 'a' breakpoint</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-a-12 col-b-6">
-			<div class="box box--block hidden-b">Box hidden at 'b' breakpoint</div>
-		</div>
-		<div class="col-a-12 col-b-6">
-			<div class="box box--block visible-b">Box visible at 'b' breakpoint</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-a-12 col-b-6">
-			<div class="box box--block hidden-c">Box hidden at 'c' breakpoint</div>
-		</div>
-		<div class="col-a-12 col-b-6">
-			<div class="box box--block visible-c">Box visible at 'c' breakpoint</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-a-12 col-b-6">
-			<div class="box box--block hidden-d">Box hidden at 'd' breakpoint</div>
-		</div>
-		<div class="col-a-12 col-b-6">
-			<div class="box box--block visible-d">Box visible at 'd' breakpoint</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-a-12 col-b-6">
-			<div class="box box--block hidden-e">Box hidden at 'e' breakpoint</div>
-		</div>
-		<div class="col-a-12 col-b-6">
-			<div class="box box--block visible-e">Box visible at 'e' breakpoint</div>
-		</div>
-	</div>
-</div>
+{% include components/utils/utils-responsive.html %}
 
 {% highlight html %}
 <div class="row">
@@ -193,21 +126,8 @@ Penguin has defined default classes to help you in common cases
 {% endhighlight%}
 
 ##text
+{% include components/utils/utils-text.html %}
 
-<div class="row penguin-example">
-	<div class="clearfix">
-		<div class="box pull-left align-left">
-			Align left
-		</div>
-		<div class="box pull-right align-right">
-			Align right
-		</div>
-		<div class="box center-block align-center">
-			Align center
-		</div>
-	</div>
-    <p class="align-justify">This fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified this fake text is justified and <span class="text-small">I can</span> <span class="text-medium">change</span> <span class="text-large">font size</span>. </p>
-</div>
 {% highlight html %}
 <div class="clearfix">
     <div class="box pull-left align-left">Align left</div>
@@ -243,10 +163,8 @@ Penguin has defined default classes to help you in common cases
 </table>
 
 ##format
+{% include components/utils/utils-format.html %}
 
-<div class="row penguin-example">
-    You can modify <span class="underline">text</span> <span class="bold">format</span> <span class="cursive">easily</span>
-</div>
 {% highlight html %}
 <p>You can modify <span class="underline">text</span> <strong class="bold">format</strong> <em class="cursive">easily</em></p>
 {% endhighlight %}
