@@ -34,9 +34,7 @@ permalink: /components/
 {% include components/alert/alert-simple.html %}
 {% include components/alert/alert-closeable.html %}
 
-
 <!-- Breadcrumb -->
-
 {% include components/breadcrumb/breadcrumb-simple.html %}
 
 <!-- Buttons -->
@@ -58,10 +56,8 @@ permalink: /components/
 {% include components/form/form-2cols.html %}
 {% include components/form/form-4cols.html %}
 
-<div class="penguin-example">
-	<div class="demo demo--target"></div>
-	<button class="btn btn--primary" data-rel="modal" data-target=".demo--target" data-modal="{title: 'Modal', content: 'Content', buttons: {btn: [{text: 'Accept', className: 'btn btn--primary'}]}}">Target modal</button>
-</div>
+<!-- Modal-->
+{% include components/modal/modal-target.html %}
 
 <!-- Nav-->
 {% include components/nav/nav-inline.html %}
@@ -80,10 +76,8 @@ permalink: /components/
 <!-- Panel -->
 {% include components/panel/panel-dropdown.html %}
 
-
 <!-- Spinner -->
 {% include components/spinner/spinner-simple.html %}
-
 
 <!-- Tab -->
 {% include components/tab/tab-inline.html %}
