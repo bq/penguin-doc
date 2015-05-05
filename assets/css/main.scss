@@ -34,6 +34,7 @@ $susy: (
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "{{ '/bower_components/penguin/lib/css/penguin.min.css' | prepend: site.baseurl }}",
         "breakpoint",
         "susy",
         "base",
