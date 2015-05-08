@@ -3,6 +3,7 @@ layout: component
 title:  "Spinner"
 ---
 
+
 Loading spinner.
 
 ##target spinner
@@ -12,6 +13,11 @@ Loading spinner.
 ##fullscreen spinner
 {% include components/spinner/spinner-fullscreen.html %}
 
+> $('target').spinner(options);
+
+{% highlight js %}
+
+{% endhighlight %}
 
 ##how to use
 
@@ -59,4 +65,14 @@ $('target').spinner('show');
 
 // Hide the spinner
 $('target').spinner('hide');
+{% endhighlight %}
+
+##example
+
+{% highlight js %}
+// Default target
+$('body').on('spinner:show', function() {});
+
+// Custom target
+$('.myDiv').on('spinner:hide', function() {});
 {% endhighlight %}
