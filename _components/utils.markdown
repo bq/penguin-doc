@@ -194,3 +194,48 @@ Penguin has defined default classes to help you in common cases
 </table>
 
 
+## color variables
+
+Instead of declaring separate variables per colour, in your project’s _variables.scss you can declare a single global variable, $palettes which is a nested map of named colour palettes.
+
+{% highlight scss %}
+// Colors palette
+$blue-base: rgb(91, 193, 214);
+$gray-base: rgb(76, 76, 76);
+
+$palettes: (
+    blue: (
+        base : $blue-base,
+        light: lighten($blue-base, 10%),
+        dark : darken($blue-base, 10%)
+    ),
+    gray: (
+        base : $gray-base,
+        light: lighten($gray-base, 10%),
+        dark : darken($gray-base, 10%)
+    )
+);
+{% endhighlight %}
+
+
+Sass function.
+
+{% highlight css %}
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+{% endhighlight %}
+
+{% highlight scss %}
+.color-example {
+    background-color: palette(blue);
+    border-color: palette(gray);
+    color: white;
+
+    &:hover {
+        background-color: palette(blue, dark);
+        border-color:  palette(gray, light);
+    }
+
+}
+{% endhighlight %}
