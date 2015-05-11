@@ -134,9 +134,23 @@ myModal.show();
 myModal.hide();
 {% endhighlight %}
 
+###example
+
+{% highlight js %}
+// Default target
+$('body').on('modal:show', function() {});
+
+// Custom target
+$('.myDiv').on('modal:hide', function() {});
+
+// Default target
+$('body').on('modal:ajaxLoaded', function() {});
+{% endhighlight %}
+
 
 ###creating modal objects
-> $.penguin.modal({options}, [target]);
+
+> $.modal({options}, [target]);
 
 ###Theme definition
 
