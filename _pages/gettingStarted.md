@@ -5,15 +5,14 @@ order: 0
 permalink: /getting-started/
 ---
 
+Penguin is very easy to install and configure. You have following options to get penguin:
+
+
+1. [Download the last release](https://github.com/bq/penguin/releases/)
+2. [Install with bower](http://bower.io/): `bower install penguin --save`
+3. Repository: Clone this repository inside your project assets `"git@github.com:bq/penguin.git"`
+
 After downloading [penguin](https://github.com/bq/penguin), follow these simple steps to get started:
-
-## Customize with Sass
-
-If you choose this way then you should build using a Task Runner. Penguin uses Grunt for compile our code.
-
-First of all, you should install [Node](https://nodejs.org/download/) and [Grunt](http://gruntjs.com/getting-started).
-If you want to build the project locally, you have to run the [Grunt](http://gruntjs.com/) task `grunt build`. This task will concat and minify the sources and create the README.md. Before all this, you do not forget to run `npm install` and `bower install`.
-
 
 ##Compiled and minified CSS and JavaScript.
 
@@ -200,3 +199,10 @@ Note:
 @import "path_to_penguin/components/_panel";
 @import "path_to_theme/components/_panel";
 {% endhighlight %}
+
+## Customize with Sass
+
+If you choose this way then you should build using a Task Runner. Penguin uses Grunt for compile our code.
+
+First of all, you should install [Node](https://nodejs.org/download/) and [Grunt](http://gruntjs.com/getting-started).
+If you want to build the project locally, you have to run the [Grunt](http://gruntjs.com/) task `grunt build`. This task will concat and minify the sources and create the README.md. Before all this, you do not forget to run `npm install` and `bower install`.

@@ -333,6 +333,11 @@
 .post-content {
   margin-bottom: $spacing-unit;
 
+  a{
+    font-weight: bold;
+    color: lighten($brand-color, 30%);
+  }
+
   h2 {
     font-size: 32px;
   }
@@ -344,6 +349,16 @@
   h4 {
     font-size: 20px;
   }
+
+  ol {
+    padding-left: 20px;
+
+    li:before{
+      content: '- ';
+    }
+
+  }
+
 }
 
 .modifier {
