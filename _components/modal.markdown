@@ -20,8 +20,16 @@ A modal is a dialog prompt, like a pop-up window, that temporarily blocks intera
 
 {% highlight html %}
 <button class="btn btn--primary" data-rel="modal" data-target=".demo--target" data-modal="{title: 'Modal', content: 'Content', buttons: {btn: [{text: 'Accept', className: 'btn btn--primary'}]}}">
-	Target modal
+  Target modal
 </button>
+{% endhighlight %}
+
+
+## Custom Modal
+{% include components/modal/modal-custom.html %}
+
+{% highlight html %}
+<button class="btn btn--primary" data-rel="modal" data-target=".demo--custom" data-modal="{template:'<div>Template</div>', closeable: true }">Custom modal</button>
 {% endhighlight %}
 
 
@@ -95,7 +103,8 @@ $('body').modal({
             text: 'Accept',
             className: 'btn btn--primary'
         }]
-    }
+    },
+    template: '<div>Template</div>'
 });
 {% endhighlight %}
 
