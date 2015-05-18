@@ -8,28 +8,28 @@ A modal is a dialog prompt, like a pop-up window, that temporarily blocks intera
 ##Full screen modal
 {% include components/modal/modal-full.html %}
 
-{% highlight html %}
-<button class="btn btn--primary" data-rel="modal" data-modal="{title: 'Modal', content: 'Content', closeable: true, buttons: {align: 'right', btn: [{text: 'Accept', className: 'btn btn--primary'}]}}">
-	Modal
-</button>
+{% highlight js %}
+ $('body').modal({
+  content: '<div class="modal__header"><h1 class="h2">Modal Title</h1><button type="button" title="close" data-close="modal" class="modal__close"><i class="icon icon--close" aria-hidden="true"></i><span class="invisible">close</span></button></div><div class="modal__body" data-region="modal-body">Modal Content</div><div class="modal__footer"><div class="btn-group align-right"><button type="button" class="btn btn--primary" data-close="modal">Accept</button></div></div>'
+});
 {% endhighlight %}
 
 
 ##Target modal
 {% include components/modal/modal-target.html %}
 
-{% highlight html %}
-<button class="btn btn--primary" data-rel="modal" data-target=".demo--target" data-modal="{title: 'Modal', content: 'Content', buttons: {btn: [{text: 'Accept', className: 'btn btn--primary'}]}}">
-  Target modal
-</button>
+{% highlight js %}
+$('.demo--target').modal({
+  content: '<div class="modal__header"><span class="h2">Modal Title</span><button type="button" title="close" data-close="modal" class="modal__close"><i class="icon icon--close" aria-hidden="true"></i><span class="invisible">close</span></button></div><div class="modal__body" data-region="modal-body">Modal Content</div><div class="modal__footer"><div class="btn-group"><button type="button" class="btn btn--primary" data-close="modal">Accept</button></div></div>'
+});
 {% endhighlight %}
 
 
-## Custom Modal
-{% include components/modal/modal-custom.html %}
+## Ajax Modal
+{% include components/modal/modal-ajax.html %}
 
 {% highlight html %}
-<button class="btn btn--primary" data-rel="modal" data-target=".demo--custom" data-modal="{template:'<div>Template</div>', closeable: true }">Custom modal</button>
+<button class="btn btn--primary" data-rel="modal" data-target="body" data-ajax="{ url: 'content.html'}">Ajax Modal</button>
 {% endhighlight %}
 
 
@@ -64,23 +64,15 @@ A modal is a dialog prompt, like a pop-up window, that temporarily blocks intera
 | data-modal            | Type             | Description                                                  | Default value     |
 |-----------------------|------------------|--------------------------------------------------------------|-------------------|
 | classModifier         | string           | Adds a class modifier in the modal component.                | ''                |
-| title                 | string           | Modal title in top.                                          | ''                |
 | backdrop              | boolean          | Adds a overlay behind to the modal.                          | true              |
 | backdropClassName     | string           | Set this class to backdrop                                   | 'modal--backdrop' |
 | show                  | boolean          | Shows the component after creating the model object.         | false             |
 | closeable             | boolean          | The modal can be closed by clicking out of it.               | true              |
-| closeIcon             | boolean          | Shows/hides the close icon.                                  | true              |
-| closeText             | string           | Close icon text and tooltip(title) text.                     | 'close'           |
-| buttons.align         | string           | Adds classes to align the buttons. 'left', 'center', 'right' | 'right'           |
-| buttons.btn           | Array of objects | Settings of each button.                                     |                   |
-| buttons.btn.text      | string           | Button text.                                                 | ''                |
-| buttons.btn.className | string           | Class name ('btn btn--primary' ).                            | ''                |
-| buttons.btn.url       | string(optional) | Adds a link element with the url value in its hrefattribute. | undefined         |
-| template              | string           | Replace modal content with custom html                       |                   |
+| content               | string           | Set modal content with custom html                           | ''                |
 
 
-| data-ajax (optional) | Type   | Description               | Default value |
-|----------------------|--------|---------------------------|---------------|
+| data-ajax (optional) | Type   | Description               | Default value                                       |
+|----------------------|--------|---------------------------|-----------------------------------------------------|
 | ajaxSettings         | object | Sets jQuery ["ajaxSettings"](http://api.jquery.com/jquery.ajax) | jquery.ajax   |
 
 
@@ -92,19 +84,10 @@ A modal is a dialog prompt, like a pop-up window, that temporarily blocks intera
 $('body').modal({
     backdrop      : true,
     closeable     : true,
-    title         : 'My modal',
-    content       : 'Message',
+    content       : '<div>Content</div>',
     ajaxSettings  : {
       url: 'content.html'
-    },
-    buttons       : {
-        align: 'right',
-        btn: [{
-            text: 'Accept',
-            className: 'btn btn--primary'
-        }]
-    },
-    template: '<div>Template</div>'
+    }
 });
 {% endhighlight %}
 
@@ -134,7 +117,7 @@ The modal's target which receives the event.
 
 {% highlight js %}
 // Create a modal
-var myModal = $.penguin.modal({title: 'My modal'}, '.panel');
+var myModal = $.penguin.modal({closeable: false}, '.panel');
 
 // Show the created modal
 myModal.show();
@@ -164,21 +147,17 @@ $('body').on('modal:ajaxLoaded', function() {});
 ###Theme definition
 
 {% highlight scss %}
-.modal {   
-  &.modal--backdrop {} 
-}
+.modal {}
 
   .modal__dialog {}
   
     .modal__dialog__content {}
    
-    
   .modal__header {}
     
-      .modal__header__title {}
-      
   .modal__body {}
   
   .modal__footer {}
-  
+
+.modal--backdrop {} 
 {% endhighlight %}
