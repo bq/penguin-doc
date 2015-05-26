@@ -21,14 +21,15 @@ Loading spinner.
 
 ##how to use
 
-| Argument          | Type    | Description                            | Default value              |
-|-------------------|---------|----------------------------------------|----------------------------|
-| target            | string  | Selector where spinner will be shown   |                            |
-| 'show'            | string  | Shows the spinner                      |                            |
-| 'hide'            | string  | Hides the spinner                      |                            |
-| text              | string  | Fallback text inside spinner           | 'Loading...'               |
-| spinnerClass      | string  | Adds this class to spinner             | 'spinner__element--circle' |
-| show              | boolean | Displays just after creating it        | false                      |
+| Argument          | Type    | Description                                                  | Default value              |
+|-------------------|---------|--------------------------------------------------------------|----------------------------|
+| transitionDuration| number  | Css transition duration. If transition is removed set to 0   | 350                        |
+| target            | string  | Selector where spinner will be shown                         |                            |
+| 'show'            | string  | Shows the spinner                                            |                            |
+| 'hide'            | string  | Hides the spinner                                            |                            |
+| text              | string  | Fallback text inside spinner                                 | 'Loading...'               |
+| spinnerClass      | string  | Adds this class to spinner                                   | 'spinner__element--circle' |
+| show              | boolean | Displays just after creating it                              | false                      |
 
 Target is the selector where spinner will be shown.
 
@@ -75,4 +76,23 @@ $('body').on('spinner:show', function() {});
 
 // Custom target
 $('.myDiv').on('spinner:hide', function() {});
+{% endhighlight %}
+
+
+##Animated
+
+You can easily add CSS3 transition to spinner when appears and disappears on the screen. You can do it through **transition class**. Check the next example:
+
+{% highlight scss %}
+.spinner {
+  opacity: 0;
+  pointer-events: none;
+  @include transition(opacity, .3s);
+
+  &.transition {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+}
 {% endhighlight %}

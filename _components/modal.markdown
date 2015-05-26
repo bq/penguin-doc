@@ -63,6 +63,7 @@ $('.demo--target').modal({
 
 | data-modal            | Type             | Description                                                  | Default value     |
 |-----------------------|------------------|--------------------------------------------------------------|-------------------|
+| transitionDuration    | number           | Css transition duration. If transition is removed set to 0   | 350               |
 | classModifier         | string           | Adds a class modifier in the modal component.                | ''                |
 | backdrop              | boolean          | Adds a overlay behind to the modal.                          | true              |
 | backdropClassName     | string           | Set this class to backdrop                                   | 'modal--backdrop' |
@@ -82,9 +83,14 @@ $('.demo--target').modal({
 
 {% highlight js %}
 $('body').modal({
-    backdrop      : true,
-    closeable     : true,
-    content       : '<div>Content</div>',
+    backdrop      : false,
+    closeable     : false,
+    content       : '<div>Content</div>'
+});
+{% endhighlight %}
+
+{% highlight js %}
+$('body').modal({
     ajaxSettings  : {
       url: 'content.html'
     }
@@ -147,21 +153,40 @@ $('body').on('modal:ajaxLoaded', function() {});
 ###Theme definition
 
 {% highlight scss %}
-.modal {   
-  &.modal--backdrop {} 
+.modal {
+  &.modal--backdrop {}
 }
 
   .modal__dialog {}
-  
+
     .modal__dialog__content {}
-   
-    
+
+
   .modal__header {}
-    
+
       .modal__header__title {}
-      
+
   .modal__body {}
-  
+
   .modal__footer {}
-  
+
 {% endhighlight %}
+
+##Animated
+
+You can easily add CSS3 transition to modal when appears and disappears on the screen. You can do it through **transition class**. Check the next example:
+
+{% highlight scss %}
+.modal {
+  opacity: 0;
+  pointer-events: none;
+  @include transition(opacity, .3s);
+
+  &.transition {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+}
+{% endhighlight %}
+
