@@ -50,23 +50,55 @@ Also you can load only the components you need for your project:
 {% endhighlight %}
 
 
-To minimize the compiled style, we can disable the doesn't used components in /components/_variables.css 
+To minimize the compiled style, we can disable the doesn't used components in /components/_variables.css.
+If you disable the parent component you won't set to true the children components variables.
 
 {% highlight scss %}
 $styles-alert                        : true;
+  $styles-alert-inline               : true;
+  $styles-alert-top                  : true;
+
 $styles-banner                       : true;
+  $styles-banner-stacked             : true;
+
 $styles-breadcrumb                   : true;
+
 $styles-button                       : true;
+  $styles-button-fluid               : true;
+
 $styles-dropdown                     : true;
+  $styles-dropdown-fluid             : true;
+  $styles-dropdown-stacked           : true;
+
 $styles-form                         : true;
+
 $styles-icon                         : true;
+
 $styles-modal                        : true;
+
 $styles-navigation                   : true;
+  $styles-navigation-bar             : true;
+  $styles-navigation-fluid           : true;
+  $styles-navigation-inline          : true;
+  $styles-navigation-stacked         : true;
+
 $styles-paginator                    : true;
+  $styles-paginator-bar              : true;
+  $styles-paginator-inline           : true;
+
 $styles-panel                        : true;
+
 $styles-spinner                      : true;
+
 $styles-tab                          : true;
+  $styles-tab-bar                    : true;
+  $styles-tab-inline                 : true;
+  $styles-tab-reverse                : true;
+  $styles-tab-stacked                : true;
+
 $styles-table                        : true;
+  $styles-table-stacked              : true;
+
 $styles-text                         : true;
 {% endhighlight %}
 
@@ -78,7 +110,7 @@ $styles-text                         : true;
     require.config({
         paths: {
             'penguin': 'path-to-penguin/penguin/lib/penguin.js'
-        }      
+        }
     });
 {% endhighlight %}
 
@@ -90,7 +122,7 @@ You can also add a single JavaSript component:
     require.config({
         paths: {
             'penguin.modal': 'path-to-penguin/penguin/src/js/modal.js'
-        }      
+        }
     });
 {% endhighlight %}
 
