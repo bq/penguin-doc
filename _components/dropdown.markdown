@@ -224,3 +224,24 @@ You can create your own custom dropdown.
     // Custom styles
 }
 {% endhighlight %}
+
+
+##Animated
+
+You can easily add CSS3 transition to dropdown when appears and disappears on the screen. You can do it through **transition class**. Check the next example:
+
+{% highlight scss %}
+.dropdown__menu {
+  pointer-events: none;
+  @include opacity(0);
+  @include translate(0, -10px);
+  @include transition(all, .3s);
+
+  .transition & {
+    pointer-events: auto;
+    @include opacity(1);
+    @include translate(0, 0);
+  }
+
+}
+{% endhighlight %}
