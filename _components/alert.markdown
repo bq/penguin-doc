@@ -154,7 +154,7 @@ Default media query:
 .alert {
     @include alert--inline;
 
-    @mixin media-minwidth(d) {
+    @include media-minwidth('d')
         // Custom styles
     }
 }

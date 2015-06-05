@@ -182,7 +182,7 @@ Default media query:
 .table {
     @include table--stacked;
 
-    @mixin media-minwidth(d) {
+    @mixin media-minwidth('d') {
         // Custom styles
     }
 }

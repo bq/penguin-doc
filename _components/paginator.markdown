@@ -133,7 +133,7 @@ Default media query:
 .paginator {
     @include paginator--bar;
 
-    @mixin media-minwidth(d) {
+    @include media-minwidth('d') {
         // Custom styles
     }
 }
