@@ -409,7 +409,7 @@ Default media query:
 .nav {
     @include nav--bar;
 
-    @mixin media-minwidth(d) {
+    @include media-minwidth('d') {
         // Custom styles
     }
 }

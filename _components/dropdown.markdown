@@ -208,7 +208,7 @@ Default media query:
 .dropdown {
     @include dropdown--stacked;
 
-    @mixin media-minwidth(d) {
+    @include media-minwidth('d') {
         // Custom styles
     }
 }

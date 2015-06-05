@@ -106,7 +106,7 @@ Default media query:
 .banner {
     @include banner--stacked;
 
-    @mixin media-minwidth(d) {
+    @include media-minwidth('d')
     	// Custom styles
     }
 }
